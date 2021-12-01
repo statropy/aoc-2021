@@ -1,4 +1,4 @@
-#day1.py
+#day1.py 2021
 import unittest
 
 def part1(readings):
@@ -33,6 +33,9 @@ class TestDay1(unittest.TestCase):
     def test_2a(self):
         self.assertEqual(part2([199,200,208,210,200,207,240,269,260,263]), 5)
 
+    def test_2b(self):
+        self.assertEqual(part2([199,200,208,210,200,207,240,269,260,263], 1), 7)
+    
     def test_1(self):
         with open('./input1.txt', 'r') as f:
             self.assertEqual(part2(f), 1734)
