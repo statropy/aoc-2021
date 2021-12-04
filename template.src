@@ -9,7 +9,8 @@ def part2(lines):
 
 class TestDay{{n}}(unittest.TestCase):
     def test_1a(self):
-        self.assertEqual(part1([]), None)
+        with open('./test{{n}}.txt', 'r') as f:
+            self.assertEqual(part1([f]), None)
 
     # def test_1b(self):
     #     self.assertEqual(part1(), None)
@@ -17,16 +18,17 @@ class TestDay{{n}}(unittest.TestCase):
     # def test_1c(self):
     #     self.assertEqual(part1(), None)
 
-    def test_1(self):
-        with open('./input{{n}}.txt', 'r') as f:
-            self.assertEqual(part1(f), None)
+    # def test_1(self):
+    #     with open('./input{{n}}.txt', 'r') as f:
+    #         self.assertEqual(part1(f), None)
 
-    def test_2a(self):
-        self.assertEqual(part2([]), None)
+    #  def test_2a(self):
+    #      with open('./test{{n}}.txt', 'r') as f:
+    #          self.assertEqual(part2([f]), None)
 
-    def test_2(self):
-        with open('./input{{n}}.txt', 'r') as f:
-            self.assertEqual(part2(f), None)
+    # def test_2(self):
+    #     with open('./input{{n}}.txt', 'r') as f:
+    #         self.assertEqual(part2(f), None)
 
 if __name__ == '__main__':
     unittest.main()
