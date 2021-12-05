@@ -1,11 +1,10 @@
 #day5.py 2021
 import unittest
-import re
 
 def vents(lines, diag=False):
     grid = {}
     for line in lines:
-        x1,y1,x2,y2 = map(int,re.findall(r'\d+', line))
+        x1,y1,x2,y2 = [int(x) for x in line.replace(' -> ', ',').split(',')]
         if x1 == x2:
             if y2 < y1:
                 y1, y2 = y2, y1
