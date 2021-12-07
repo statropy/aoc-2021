@@ -13,9 +13,8 @@ def sum2(crabs, m):
 
 def part2(lines):
     crabs = [int(n) for n in lines[0].split(',')]
-    f = math.floor(statistics.mean(crabs))
-    r = round(statistics.mean(crabs))
-    return min(sum2(crabs, f), sum2(crabs, r))
+    m = statistics.mean(crabs)
+    return min(sum2(crabs, math.floor(m)), sum2(crabs, round(m)))
 
 class TestDay7(unittest.TestCase):
     def test_1a(self):
