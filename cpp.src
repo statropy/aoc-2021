@@ -1,0 +1,40 @@
+// day{{n}}.cpp
+#include <gtest/gtest.h>
+#include <string>
+#include <fstream>
+#include <numeric>
+using namespace std;
+
+int part1(ifstream &f)
+{
+    return 0;
+}
+
+int part2(ifstream &f)
+{
+    return 0;
+}
+
+TEST(Day{{n}}, Part1_test) {
+    ifstream infile("../test{{n}}.txt");
+    ASSERT_EQ(part1(infile), 0);
+    infile.close();
+}
+
+// TEST(Day{{n}}, Part1) {
+//     ifstream infile("../input{{n}}.txt");
+//     ASSERT_EQ(part1(infile), 0);
+//     infile.close();
+// }
+
+// TEST(Day{{n}}, Part2_test) {
+//     ifstream infile("../test{{n}}.txt");
+//     ASSERT_EQ(part2(infile), 0);
+//     infile.close();
+// }
+
+// TEST(Day{{n}}, Part2) {
+//     ifstream infile("../input{{n}}.txt");
+//     ASSERT_EQ(part2(infile), 0);
+//     infile.close();
+// }
