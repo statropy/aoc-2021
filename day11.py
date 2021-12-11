@@ -1,16 +1,21 @@
 #day11.py 2021
 import unittest
 
-delta = [(x,y) for y in range(-1,2) for x in range(-1,2)]
+def delta(r,c):
+    for dr in range(r-1,r+2):
+        if dr >=0 and dr <=9:
+            for dc in range(c-1,c+2):
+                if dc >=0 and dc <=9:
+                    yield(dr,dc)
 
 def do_step(grid, flashed, r, c):
-    if r < 0 or c < 0 or r > 9 or c > 9 or grid[r][c] > 9:
+    if grid[r][c] > 9:
         return
     grid[r][c] += 1
     if grid[r][c] > 9:
         flashed.add((r,c))
-        for dr,dc in delta:
-            do_step(grid, flashed, r+dr, c+dc)
+        for dr,dc in delta(r,c):
+            do_step(grid, flashed, dr, dc)
 
 def part1(lines):
     grid = []
