@@ -82,20 +82,16 @@ int part2(ifstream &f) {
 
 TEST(Day11, Part1_test) {
     ASSERT_EQ(Day11("../test11.txt").part1(), 1656);
-
 }
 
 TEST(Day11, Part1) {
     ASSERT_EQ(Day11("../input11.txt").part1(), 1741);
-
 }
 
 TEST(Day11, Part2_test) {
     ASSERT_EQ(Day11("../test11.txt").part2(), 195);
-
 }
 
 TEST(Day11, Part2) {
     ASSERT_EQ(Day11("../input11.txt").part2(), 440);
-
 }

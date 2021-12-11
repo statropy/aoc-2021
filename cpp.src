@@ -5,36 +5,41 @@
 #include <numeric>
 using namespace std;
 
-int part1(ifstream &f)
-{
-    return 0;
-}
+class Day{{n}} {
+protected:
 
-int part2(ifstream &f)
-{
-    return 0;
-}
+public:
+    Day{{n}}(const char *file) {
+        ifstream infile(file);
+        string line;
+
+        while (getline(infile,line)) {
+
+        }
+        infile.close();
+    }
+
+    int part1() {
+        return 0;
+    }
+
+    int part2() {
+        return 0;
+    }
+};
 
 TEST(Day{{n}}, Part1_test) {
-    ifstream infile("../test{{n}}.txt");
-    ASSERT_EQ(part1(infile), 0);
-    infile.close();
+    ASSERT_EQ(Day{{n}}("../test{{n}}.txt").part1(), 0);
 }
 
-// TEST(Day{{n}}, Part1) {
-//     ifstream infile("../input{{n}}.txt");
-//     ASSERT_EQ(part1(infile), 0);
-//     infile.close();
-// }
+TEST(Day{{n}}, Part1) {
+    ASSERT_EQ(Day{{n}}("../input{{n}}.txt").part1(), 0);
+}
 
-// TEST(Day{{n}}, Part2_test) {
-//     ifstream infile("../test{{n}}.txt");
-//     ASSERT_EQ(part2(infile), 0);
-//     infile.close();
-// }
+TEST(Day{{n}}, Part2_test) {
+    ASSERT_EQ(Day{{n}}("../test{{n}}.txt").part2(), 0);
+}
 
-// TEST(Day{{n}}, Part2) {
-//     ifstream infile("../input{{n}}.txt");
-//     ASSERT_EQ(part2(infile), 0);
-//     infile.close();
-// }
+TEST(Day{{n}}, Part2) {
+    ASSERT_EQ(Day{{n}}("../input{{n}}.txt").part2(), 0);
+}
