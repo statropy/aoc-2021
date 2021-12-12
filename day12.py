@@ -45,7 +45,6 @@ def part2(lines):
     edges, starts, lower = get_map(lines)
     solutions = set()
     for node in starts:
-        traverse(edges, node, '', solutions)
         for dup in lower:
             traverse(edges, node, '', solutions, dup)
     return len(solutions)
