@@ -51,6 +51,15 @@ def part2(lines):
     points, folds = parseinput(lines)
     points = foldit(points,folds)
     x, y = list(zip(*points))
+    print()
+    for r in range(max(y)+1):
+        for c in range(max(x)+1):
+            if (c,r) in points:
+                print('#', end='')
+            else:
+                print(' ', end='')
+        print()
+    print()
     s = plt.scatter(x, y)
     s.axes.invert_yaxis()
     plt.axis('scaled')
