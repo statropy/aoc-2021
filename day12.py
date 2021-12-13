@@ -61,6 +61,8 @@ def part2mp(lines):
     edges, starts, lower = get_map(lines)
     with Pool(len(starts)) as p:
         result = p.starmap(part2worker, zip(itertools.repeat(edges), itertools.repeat(lower), starts))
+        p.close()
+        p.join()
         solution = set().union(*result)
         return len(solution)
 
