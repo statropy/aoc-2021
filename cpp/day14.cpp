@@ -81,14 +81,13 @@ protected:
         }
 
         char z = rules[rules_key(a,b)];
-        Counter c;
+        Counter &c = lookup[key];
         c[z] += 1;
         if (depth < max_depth-1) {
             c += step(a, z, depth+1);
             c += step(z, b, depth+1);
         }
-        lookup[key] = c;
-        return lookup[key];
+        return c;
     }
 
     uint64_t runit(int md) {
