@@ -56,8 +56,7 @@ public:
     }
 
     int64_t parse() {
-        int64_t version = getint(3);
-        version_total += version;
+        version_total += getint(3);
         int64_t opcode = getint(3);
 
         int64_t v = 0;
@@ -119,6 +118,7 @@ public:
                 if (parse() == parse()) {
                     v = 1;
                 }
+                break;
         }
         return v;
     }
