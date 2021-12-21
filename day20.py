@@ -45,10 +45,9 @@ def convert(image, algo, invert=False):
     output.append('0'*(width+2))
     return output
 
-def test1(lines, times=2):
+def test1(lines, times=1):
     image, algo, negalgo = parse(lines)
-    for _ in range(times//2):
-        image = convert(image, algo)
+    for _ in range(times):
         image = convert(image, algo)
     count = 0
     for line in image:
@@ -67,9 +66,6 @@ def part1(lines, times=2):
         count += line.count('1')
         # print(line.replace('1','#').replace('0','.'))
     return count
-
-def part2(lines):
-    return 0
 
 class TestDay20(unittest.TestCase):
     def test_1a(self):
